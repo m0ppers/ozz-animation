@@ -168,7 +168,7 @@ install:
   fi
 # Download and install fbx sdk
 - if [[ $TRAVIS_OS_NAME == "linux" ]]; then
-    FBX_DOWNLOAD=${fbx_download:"http://download.autodesk.com/us/fbx/2017/2017.1/fbx20171_fbxsdk_linux.tar.gz"}
+    FBX_DOWNLOAD=${fbx_download:-"http://download.autodesk.com/us/fbx/2017/2017.1/fbx20171_fbxsdk_linux.tar.gz"}
     mkdir fbx;
     cd fbx;
     sudo wget $FBX_DOWNLOAD -O fbx.tar.gz;
@@ -177,7 +177,7 @@ install:
     cd ..;
   fi
 - if [[ $TRAVIS_OS_NAME == "osx" ]]; then
-    FBX_DOWNLOAD=${fbx_download:"http://download.autodesk.com/us/fbx/2017/2017.1/fbx20171_fbxsdk_clang_mac.pkg.tgz"}
+    FBX_DOWNLOAD=${fbx_download:-"http://download.autodesk.com/us/fbx/2017/2017.1/fbx20171_fbxsdk_clang_mac.pkg.tgz"}
     mkdir fbx;
     cd fbx;
     sudo wget $FBX_DOWNLOAD -O fbx.tgz;
