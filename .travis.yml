@@ -11,7 +11,7 @@ matrix:
   #  compiler: gcc
   #  env:
   #  - env_build_emscripten=1
- 
+
   # mac os
   # Default mac os clang build
   - os: osx
