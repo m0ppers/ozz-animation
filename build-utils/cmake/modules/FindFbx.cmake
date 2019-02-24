@@ -162,6 +162,20 @@ function(FindFbxLibrariesGeneric _FBX_ROOT_DIR _OUT_FBX_LIBRARIES _OUT_FBX_LIBRA
         ${Z_SEARCH_LIB_NAMES}
         HINTS ${ADDITIONAL_LIB_SEARCH_PATH_DEBUG})
 
+      # for whatever reason on apple it will need iconv as well?!
+      if(APPLE)
+        find_library(ICONV_LIB
+          iconv)
+
+        # no special debug search here as mac only anyway
+
+        if(NOT ICONV_LIB)
+          message(WARNING "FBX found but required iconv was not found!")
+        endif()
+        list(APPEND FBX_LIB ${ICONV_LIB})
+        list(APPEND FBX_LIB_DEBUG ${ICONV_LIB})
+      endif()
+
       if(NOT XML_LIB)
         message(WARNING "FBX found but required libxml2 was not found!")
       endif()
