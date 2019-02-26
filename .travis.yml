@@ -161,6 +161,8 @@ before_install:
 - echo before_install----------------------------------------------------------
 
 install:
+- echo $SHELL
+- $SHELL --version
 - echo install-----------------------------------------------------------------
 # Download and install mesa dev
 - if [[ $TRAVIS_OS_NAME == "linux" ]]; then
