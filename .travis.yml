@@ -169,13 +169,14 @@ install:
     sudo apt-get install libgl1-mesa-dev libglu1-mesa-dev;
   fi
 # Download and install fbx sdk
+# "|| echo" because 2019 sdk would return code 130 when reading the readme (lol)
 - if [[ $TRAVIS_OS_NAME == "linux" ]]; then
     FBX_DOWNLOAD=${fbx_download:-"http://download.autodesk.com/us/fbx/2017/2017.1/fbx20171_fbxsdk_linux.tar.gz"};
     mkdir fbx;
     cd fbx;
     sudo wget $FBX_DOWNLOAD -O fbx.tar.gz;
     sudo tar -xf "fbx.tar.gz";
-    yes yes | sudo ./*_fbxsdk_linux /usr/local || echo; # wow...reading readme returns results in $? 130 for 2019 SDK
+    yes yes | sudo ./*_fbxsdk_linux /usr/local || echo;
     cd ..;
   fi
 - if [[ $TRAVIS_OS_NAME == "osx" ]]; then
