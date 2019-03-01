@@ -158,7 +158,7 @@ matrix:
         - g++-6
     env:
       - env_build_cpp11=1
-  #    - fbx_download=https://www.autodesk.com/content/dam/autodesk/www/adn/fbx/20192/fbx20192_fbxsdk_linux.tar.gz
+      - fbx_download=https://www.autodesk.com/content/dam/autodesk/www/adn/fbx/20192/fbx20192_fbxsdk_linux.tar.gz
   - os: osx
     compiler: clang
     env:
