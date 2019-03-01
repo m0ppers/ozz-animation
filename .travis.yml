@@ -149,7 +149,13 @@ matrix:
   #      - clang-3.8
   ## fbx2019
   - os: linux
-    compiler: gcc
+    compiler: gcc-6
+    addons:
+      apt:
+        sources:
+        - ubuntu-toolchain-r-test
+        packages:
+        - g++-6
     env:
       - env_build_cpp11=1
       - fbx_download=https://www.autodesk.com/content/dam/autodesk/www/adn/fbx/20192/fbx20192_fbxsdk_linux.tar.gz
