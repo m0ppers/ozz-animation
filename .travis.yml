@@ -14,140 +14,140 @@ matrix:
 
   # mac os
   # Default mac os clang build
-  - os: osx
-    compiler: clang
-  - os: osx
-    compiler: clang
-    env:
-    - env_cmake_configuration=Release
+  #- os: osx
+  #  compiler: clang
+  #- os: osx
+  #  compiler: clang
+  #  env:
+  #  - env_cmake_configuration=Release
   # Xcode mac os clang build
-  - os: osx
-    compiler: clang
-    env :
-    - env_cmake_generator=Xcode
-  - os: osx
-    compiler: clang
-    env :
-    - env_cmake_generator=Xcode
-    - env_cmake_configuration=Release
+  #- os: osx
+  #  compiler: clang
+  #  env :
+  #  - env_cmake_generator=Xcode
+  #- os: osx
+  #  compiler: clang
+  #  env :
+  #  - env_cmake_generator=Xcode
+  #  - env_cmake_configuration=Release
 
   # Linux
   # Default linux gcc
-  - os: linux
-    compiler: gcc
+  #- os: linux
+  #  compiler: gcc
   # Default linux gcc
-  - os: linux
-    compiler: gcc
-    env:
-    - env_cmake_configuration=Release
+  #- os: linux
+  #  compiler: gcc
+  #  env:
+  #  - env_cmake_configuration=Release
   # Default linux clang
-  - os: linux
-    compiler: clang
+  #- os: linux
+  #  compiler: clang
   # Default linux release clang
-  - os: linux
-    compiler: clang
-    env:
-    - env_cmake_configuration=Release
+  #- os: linux
+  #  compiler: clang
+  #  env:
+  #  - env_cmake_configuration=Release
 
   # Specific configurations
-  - os: linux
-    compiler: clang
-    env:
-    - env_build_cpp11=1
-  - os: linux
-    compiler: clang
-    env:
-    - env_build_fbx=0 
-  - os: linux
-    compiler: clang
-    env:
-    - env_build_howtos=0
-  - os: linux
-    compiler: clang
-    env:
-    - env_build_samples=0
-  - os: linux
-    compiler: clang
-    env:
-    - env_build_simdref=1
-  - os: linux
-    compiler: clang
-    env:
-    - env_build_tests=0
-  - os: linux
-    compiler: clang
-    env:
-    - env_build_fbx=0
-    - env_build_samples=0
-  - os: linux
-    compiler: clang
-    env:
-    - env_build_fbx=0
-    - env_build_tests=0
-  - os: linux
-    compiler: clang
-    env:
-    - env_build_data=0
-    - env_build_fbx=0
-    - env_build_samples=0
-    - env_build_tests=0
-  - os: linux
-    compiler: clang
-    env:
-    - env_build_data=0
-  - os: linux
-    compiler: clang
-    env:
-    - env_src_root="../test/sub/"
+  #- os: linux
+  #  compiler: clang
+  #  env:
+  #  - env_build_cpp11=1
+  #- os: linux
+  #  compiler: clang
+  #  env:
+  #  - env_build_fbx=0 
+  #- os: linux
+  #  compiler: clang
+  #  env:
+  #  - env_build_howtos=0
+  #- os: linux
+  #  compiler: clang
+  #  env:
+  #  - env_build_samples=0
+  #- os: linux
+  #  compiler: clang
+  #  env:
+  #  - env_build_simdref=1
+  #- os: linux
+  #  compiler: clang
+  #  env:
+  #  - env_build_tests=0
+  #- os: linux
+  #  compiler: clang
+  #  env:
+  #  - env_build_fbx=0
+  #  - env_build_samples=0
+  #- os: linux
+  #  compiler: clang
+  #  env:
+  #  - env_build_fbx=0
+  #  - env_build_tests=0
+  #- os: linux
+  #  compiler: clang
+  #  env:
+  #  - env_build_data=0
+  #  - env_build_fbx=0
+  #  - env_build_samples=0
+  #  - env_build_tests=0
+  #- os: linux
+  #  compiler: clang
+  #  env:
+  #  - env_build_data=0
+  #- os: linux
+  #  compiler: clang
+  ##  env:
+   # - env_src_root="../test/sub/"
 
   # Newer compilers
   # gcc
-  - os: linux
-    compiler: gcc-4.9
-    env: 
-    - env_cmake_cxx_compiler=g++-4.9
-    - env_cmake_c_compiler=gcc-4.9
-    addons:
-      apt:
-        sources:
-        - ubuntu-toolchain-r-test
-        packages:
-        - g++-4.9
-  - os: linux
-    compiler: gcc-5
-    env: 
-    - env_cmake_cxx_compiler=g++-5
-    - env_cmake_c_compiler=gcc-5
-    addons:
-      apt:
-        sources:
-        - ubuntu-toolchain-r-test
-        packages:
-        - g++-5
-  - os: linux
-    compiler: gcc-6
-    env: 
-    - env_cmake_cxx_compiler=g++-6
-    - env_cmake_c_compiler=gcc-6
-    addons:
-      apt:
-        sources:
-        - ubuntu-toolchain-r-test
-        packages:
-        - g++-6
-  # clang
-  - os: linux
-    compiler: clang-3.8
-    env:
-    - env_cmake_cxx_compiler=clang++-3.8
-    - env_cmake_c_compiler=clang-3.8
-    addons:
-      apt:
-        sources:
-        - llvm-toolchain-precise-3.8
-        packages:
-        - clang-3.8
-  # fbx2019
+  #- os: linux
+  #  compiler: gcc-4.9
+  #  env: 
+  #  - env_cmake_cxx_compiler=g++-4.9
+  #  - env_cmake_c_compiler=gcc-4.9
+  #  addons:
+  #    apt:
+  #      sources:
+  #      - ubuntu-toolchain-r-test
+  #      packages:
+  #      - g++-4.9
+  #- os: linux
+  #  compiler: gcc-5
+  #  env: 
+  #  - env_cmake_cxx_compiler=g++-5
+  #  - env_cmake_c_compiler=gcc-5
+  #  addons:
+  #    apt:
+  #      sources:
+  #      - ubuntu-toolchain-r-test
+  #      packages:
+  #      - g++-5
+  #- os: linux
+  #  compiler: gcc-6
+  #  env: 
+  #  - env_cmake_cxx_compiler=g++-6
+  #  - env_cmake_c_compiler=gcc-6
+  #  addons:
+  #    apt:
+  #      sources:
+  #      - ubuntu-toolchain-r-test
+  #      packages:
+  #      - g++-6
+  ## clang
+  #- os: linux
+  #  compiler: clang-3.8
+  #  env:
+  #  - env_cmake_cxx_compiler=clang++-3.8
+  #  - env_cmake_c_compiler=clang-3.8
+  #  addons:
+  #    apt:
+  #      sources:
+  #      - llvm-toolchain-precise-3.8
+  #      packages:
+  #      - clang-3.8
+  ## fbx2019
   - os: linux
     compiler: gcc
     env:
@@ -177,6 +177,7 @@ install:
     sudo wget $FBX_DOWNLOAD -O fbx.tar.gz;
     sudo tar -xf "fbx.tar.gz";
     (yes yes | sudo ./*_fbxsdk_linux /usr/local) || true;
+    echo "watt"
     cd ..;
   fi
 - if [[ $TRAVIS_OS_NAME == "osx" ]]; then
