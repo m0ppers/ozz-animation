@@ -192,7 +192,7 @@ install:
     cd ..;
   fi
 - if [[ $TRAVIS_OS_NAME == "osx" ]]; then
-    if [ -z "$fbx_download"]; then
+    if [ -z "$fbx_download" ]; then
       FBX_DOWNLOAD="http://download.autodesk.com/us/fbx/2017/2017.1/fbx20171_fbxsdk_clang_mac.pkg.tgz";
     else
       FBX_DOWNLOAD="$fbx_download";
