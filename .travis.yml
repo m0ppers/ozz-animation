@@ -14,8 +14,8 @@ matrix:
 
   # mac os
   # Default mac os clang build
-  #- os: osx
-  #  compiler: clang
+  - os: osx
+    compiler: clang
   #- os: osx
   #  compiler: clang
   #  env:
